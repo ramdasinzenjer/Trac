@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="10dp" android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_weight="0.5"
+        android:layout_height="match_parent"
+        android:id="@+id/Address" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="0.5"
+
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:textColor="@color/white"
+            android:background="@color/accent"
+            android:textAllCaps="true"
+            android:id="@+id/save"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+
+            android:layout_weight="0.5"
+            android:textColor="@color/white"
+            android:background="@color/primary_dark"
+            android:textAllCaps="true"
+            android:id="@+id/cancel"/>
+    </LinearLayout>
+</LinearLayout>

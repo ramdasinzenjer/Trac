@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile_setup_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sagar.trac.Views.ProfileSetupPage">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/trac_toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/profilename_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <EditText
+                    android:id="@+id/profilename"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Profile name"
+                    android:inputType="text"
+                    android:padding="10dp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Switch
+                android:id="@+id/wifi_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone_input_layout"
+                android:padding="20dp"
+                android:text="Enable wifi " />
+
+            <Switch
+                android:id="@+id/bluetooth_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wifi_switch"
+                android:padding="20dp"
+                android:text="Enable Bluetooth" />
+
+
+            <Switch
+                android:id="@+id/mobile_data_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gps_switch"
+                android:padding="20dp"
+                android:text="Enable Mobile Data" />
+
+            <Switch
+                android:id="@+id/audio_profile_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobile_data_switch"
+                android:padding="20dp"
+                android:text="Mode selection" />
+
+            <Spinner
+                android:id="@+id/mode_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown"
+                android:layout_below="@+id/audio_profile_switch"
+                android:padding="20dp"
+                android:visibility="gone"></Spinner>
+
+
+
+
+
+            <EditText
+                android:id="@+id/sms_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="SMS message for Mode change"
+                android:inputType="text"
+                android:padding="20dp"
+                android:text="16sp"
+                android:visibility="gone" />
+
+
+            <Switch
+                android:id="@+id/message_reading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sim_change_detection"
+                android:padding="20dp"
+                android:text="Hand free SMS reading" />
+
+
+            <Button
+                android:onClick="Save"
+                android:textAllCaps="true"
+                android:text="Next >>"
+                android:textSize="18sp"
+              android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:background="@color/primary_dark"
+                android:layout_below="@+id/message_reading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
